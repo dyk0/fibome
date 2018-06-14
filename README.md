@@ -1,4 +1,5 @@
 # Welcome to Fibome(Fibø-meh)
+[![Build Status](https://travis-ci.org/dyk0/fibome.svg?branch=master)](https://travis-ci.org/dyk0/fibome)
 Give me Fibonocci! An API to satisfy that Fibonocci need.
 
 ## Description
@@ -26,7 +27,8 @@ $ make docker-build
 ```
 
 ## Run
-Docker image is available on Dockerhub
+Docker image is available on [Dockerhub]: https://hub.docker.com/r/dyk0/fibome/
+
 ```
 $ docker pull dyk0/fibome
 $ docker run -p 8000:8000 dyk0/fibome

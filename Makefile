@@ -21,7 +21,7 @@ deps:
 				$(GOGET) github.com/julienschmidt/httprouter
 docker-build:
 				docker build -t dyk0/fibome:$(GIT_SHA) -f Dockerfile $(CURDIR)
-docker-push: docker-build
+docker-push:
 				docker tag dyk0/fibome:$(GIT_SHA) dyk0/fibome:latest
 				docker push dyk0/fibome:$(GIT_SHA)
 				docker push dyk0/fibome:latest

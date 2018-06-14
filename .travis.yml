@@ -1,0 +1,18 @@
+sudo: required
+
+language: go
+services:
+    - docker
+before_install:
+  - make deps
+install:
+  - make build
+  - make docker-build
+script:
+  - make test
+
+after_success:
+  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
+      docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD ;
+      make docker-push ;
+    fi
